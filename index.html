@@ -1,60 +1,58 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>My First CI/CD Website</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .login-container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
             text-align: center;
+            margin: 0;
+            padding: 60px 20px;
+            background: #f3f6fb;
+            color: #243047;
         }
-        h2 {
-            margin-bottom: 20px;
+
+        .card {
+            max-width: 600px;
+            margin: auto;
+            padding: 35px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px #00000012;
         }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+
+        h1 {
+            color: #1769aa;
         }
-        .login-btn {
-            width: 100%;
-            padding: 10px;
-            background: #28a745;
-            color: white;
+
+        button {
+            padding: 12px 22px;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
+            background: #1769aa;
+            color: white;
             cursor: pointer;
-        }
-        .login-btn:hover {
-            background: #218838;
         }
     </style>
 </head>
 <body>
+    <div class="card">
+        <h1>My First CI/CD Project!</h1>
+        <p>I'm learning Continuous Integration and Deployment.</p>
+        <p>This website is hosted using GitHub Pages.</p>
 
-    <div class="login-container">
-        <h2>Login</h2>
-        <form>
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <button class="login-btn">Login</button>
-        </form>
+        <button onclick="showMessage()">Click Me</button>
+        <p id="message"></p>
     </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").textContent =
+                "My CI/CD journey has started successfully!";
+        }
+    </script>
 </body>
 </html>
